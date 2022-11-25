@@ -1,10 +1,13 @@
-import PySimpleGUI as sg
+# outro comando: import PySimpleGUI as sg
 
+from PySimpleGUI import PySimpleGUI as sg
+
+# Instalar o PySimpleGUI
 
 def tela_ini():
     """
-    -> Cria a janela inicial do programa com suas configurações.
-    :return: Sem retorno.
+     Cria ou abre a janela inicial do programa com suas configurações.
+    Return: Sem retorno.
     """
     sg.theme('Reddit')
 
@@ -22,7 +25,7 @@ def tela_ini():
     ]
 
     layout = [
-        [sg.Text('ConsultaBR', font='arial 20 bold')],
+        [sg.Text('Consulte o CEP ou DDD do Brasil', font='arial 20 bold')],
         [sg.Text('Seja bem vindo!', font='arial 14', pad=(0, 0))],
         [sg.Text('Faça consulta de CEP e DDD para estados e cidades do Brasil', font='arial 14', pad=(0, 0))],
         [sg.Button('CEP', font='arial 12', size=(8, 1), pad=(88, (30, 10))),
@@ -30,23 +33,23 @@ def tela_ini():
         [sg.Frame(layout=coluna1, title='', element_justification='center', pad=(30, 0)),
          sg.Frame(layout=coluna2, title='', element_justification='center', pad=(30, (0, 104)))],
         [sg.CButton('Sair', font='arial 12', size=(8, 1), pad=(0, (50, 0)))],
-        [sg.Text('julio©', pad=(0, (35, 0)))]
+        [sg.Text('Julio©', pad=(0, (35, 0)))]
 
 
     ]
-    telaprin = sg.Window('ConsultaBR', element_justification='center', element_padding=(0, 10),
-                         layout=layout, size=(600, 500), finalize=True)
+    telaprin = sg.Window('Consulta Brasil', element_justification='center', element_padding=(0, 10),
+                         layout=layout, size=(800, 500), finalize=True)
 
 
 def tela_cep():
     """
-    -> Cria a janela de consulta CEP e suas configurações.
-    :return: Sem retorno
+     Cria ou abre a janela de consulta CEP e suas configurações.
+    Return: Sem retorno
     """
     sg.theme('Reddit')
 
     cep = [
-        [sg.Text('Informe o CEP (Só números)', font='arial 12', pad=(0, 0))],
+        [sg.Text('Digite o CEP (digite 8 números seguidos sem o traço "-")', font='arial 12', pad=(0, 0))],
         [sg.Input(size=(20, 0), font='arial 12', pad=(0, 0), key='cep', background_color='white')],
         [sg.Button('Consultar', font='arial 12', size=(10, 1))]
     ]
@@ -61,10 +64,10 @@ def tela_cep():
 
     coluna2 = [
         [sg.Input(font='arial 12 bold', background_color='white', key='logradouro', size=(35, 1))],
-        [sg.Input(font='arial 12 bold', background_color='white',key='bairro', size=(30, 1))],
-        [sg.Input(font='arial 12 bold', background_color='white',key='localidade', size=(30, 1))],
-        [sg.Input(font='arial 12 bold', background_color='white',key='uf', size=(4, 1))],
-        [sg.Input(font='arial 12 bold', background_color='white',key='ddd', size=(4, 1))]
+        [sg.Input(font='arial 12 bold', background_color='white', key='bairro', size=(30, 1))],
+        [sg.Input(font='arial 12 bold', background_color='white', key='localidade', size=(30, 1))],
+        [sg.Input(font='arial 12 bold', background_color='white', key='uf', size=(4, 1))],
+        [sg.Input(font='arial 12 bold', background_color='white', key='ddd', size=(4, 1))]
     ]
 
     botoes = [
@@ -75,24 +78,24 @@ def tela_cep():
     ]
 
     layout = [
-        [sg.Text('ConsultaCEP', font='arial 18 bold', pad=(0, 0))],
+        [sg.Text('Consultar o CEP (Código de Endereçamento Postal)', font='arial 18 bold', pad=(0, 0))],
         [sg.Column(cep, justification='center', element_justification='center')],
         [sg.Column(coluna1, pad=((0, 20), 0)), sg.Column(coluna2)],
         [sg.Column(botoes, justification='center')]
     ]
-    telaCep = sg.Window('ConsultaCEP', element_padding=(0, 10), layout=layout, size=(600, 500),
+    telaCep = sg.Window('Consultar o CEP', element_padding=(0, 10), layout=layout, size=(800, 500),
                         finalize=True)
 
 
 def tela_ddd():
     """
-    -> Cria a janela de consulta DDD e suas configurações.
-    :return: Sem retorno.
+     Cria a janela de consulta DDD e suas configurações.
+    Return: Sem retorno.
     """
     sg.theme('Reddit')
 
     ddd = [
-        [sg.Text('Informe o DDD', font='arial 12', pad=(0, 0))],
+        [sg.Text('Digite o DDD (Digite apenas 2 números)', font='arial 12', pad=(0, 0))],
         [sg.Input(size=(3, 0), font='arial 12', pad=(0, 0), key='ddd', background_color='white')],
         [sg.Button('Consultar', font='arial 12', size=(10, 1))]
     ]
@@ -115,12 +118,12 @@ def tela_ddd():
     ]
 
     layout = [
-        [sg.Text('ConsultaDDD', font='arial 18 bold', pad=(0, 0))],
+        [sg.Text('Consultar o DDD (Discagem Direta a Distância)', font='arial 18 bold', pad=(0, 0))],
         [sg.Column(ddd, justification='center', element_justification='center')],
         [sg.Column(coluna1, pad=((0, 20), 0)), sg.Column(coluna2)],
         [sg.Column(botoes, justification='center')]
 
 
     ]
-    teladdd = sg.Window('ConsultaDDD', element_padding=(0, 10), layout=layout, size=(600, 500), finalize=True)
+    teladdd = sg.Window('Consultar o DDD', element_padding=(0, 10), layout=layout, size=(800, 500), finalize=True)
 
