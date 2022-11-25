@@ -127,3 +127,4 @@ def tela_ddd():
     ]
     teladdd = sg.Window('Consultar o DDD', element_padding=(0, 10), layout=layout, size=(800, 500), finalize=True)
 
+
