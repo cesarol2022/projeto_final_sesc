@@ -15,7 +15,7 @@ def consulta_ddd(ddd):
     """
     -> Função que faz a consulta do DDD.
     Para o ddd: Informa o DDD a ser consultado.
-    Return: Retorna os dados da consulta no forma json.
+    Return: Retorna os dados da consulta no formato json.
     """
     import requests
     url = 'https://brasilapi.com.br/api/ddd/v1/%s' % ddd
