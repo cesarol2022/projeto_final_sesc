@@ -2,7 +2,7 @@
 
 from PySimpleGUI import PySimpleGUI as sg
 
-# Instalar o PySimpleGUI
+# Instalar a API do PySimpleGUI atraves do codigo: from PySimpleGUI import PySimpleGUI as sg
 
 def tela_ini():
     """
@@ -126,5 +126,4 @@ def tela_ddd():
 
     ]
     teladdd = sg.Window('Consultar o DDD', element_padding=(0, 10), layout=layout, size=(800, 500), finalize=True)
-
 
