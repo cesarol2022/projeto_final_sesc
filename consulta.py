@@ -13,7 +13,7 @@ def consulta_cep(cep):
 
 def consulta_ddd(ddd):
     """
-     Função que faz a consulta do DDD.
+    -> Função que faz a consulta do DDD.
     Para o ddd: Informa o DDD a ser consultado.
     Return: Retorna os dados da consulta no forma json.
     """
