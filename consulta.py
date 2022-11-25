@@ -1,8 +1,8 @@
 def consulta_cep(cep):
     """
-    -> Função que faz a consulta do CEP.
-    :param cep: Passa o CEP a ser consultado.
-    :return: Retorna os dados da consulta no formato json.
+     Função que faz a consulta do CEP.
+    Para o cep: Passa o CEP a ser consultado.
+    Return: Retorna os dados da consulta no formato json.
     """
     import requests
     url = 'https://viacep.com.br/ws/%s/json/' % cep
@@ -14,7 +14,7 @@ def consulta_cep(cep):
 def consulta_ddd(ddd):
     """
     -> Função que faz a consulta do DDD.
-    :param ddd: Passa o DDD a ser consultado.
+    :para o ddd: Passa o DDD a ser consultado.
     :return: Retorna os dados da consulta no forma json.
     """
     import requests
