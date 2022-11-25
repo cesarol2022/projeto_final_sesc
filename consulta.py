@@ -1,7 +1,7 @@
 def consulta_cep(cep):
     """
      Função que faz a consulta do CEP.
-    Para o cep: Passa o CEP a ser consultado.
+    Para o cep: Informa o CEP a ser consultado.
     Return: Retorna os dados da consulta no formato json.
     """
     import requests
@@ -13,9 +13,9 @@ def consulta_cep(cep):
 
 def consulta_ddd(ddd):
     """
-    -> Função que faz a consulta do DDD.
-    :para o ddd: Passa o DDD a ser consultado.
-    :return: Retorna os dados da consulta no forma json.
+     Função que faz a consulta do DDD.
+    Para o ddd: Informa o DDD a ser consultado.
+    Return: Retorna os dados da consulta no forma json.
     """
     import requests
     url = 'https://brasilapi.com.br/api/ddd/v1/%s' % ddd
