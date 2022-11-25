@@ -1,3 +1,4 @@
+# Importa os arquivos consulta.py e interface_grafica.py
 from consulta import *
 from interface_grafica import *
 
@@ -65,5 +66,4 @@ while True:
             elif event == 'Voltar':
                 window.close()
                 break
-
 
