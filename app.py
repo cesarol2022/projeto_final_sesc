@@ -66,4 +66,3 @@ while True:
             elif event == 'Voltar':
                 window.close()
                 break
-
